@@ -40,7 +40,8 @@ function RecipeList({ recipes, onRecipeSelect, selectedRecipe }) {
           tabIndex="-1"
           role="dialog"
         >
-          <div className="modal-dialog" role="document">
+          <div className="modal-dialog modal-dialog-scrollable" role="document">
+            {/* Add modal-dialog-scrollable class here */}
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">Recipe Details</h5>

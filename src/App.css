@@ -9,3 +9,10 @@
   font-size: 2em;
   color: #333;
 }
+
+.modal-body {
+  max-height: calc(
+    100vh - 150px
+  ); /* Adjust the 210px to fit the modal header and footer */
+  overflow-y: auto;
+}
