@@ -16,3 +16,10 @@
   ); /* Adjust the 210px to fit the modal header and footer */
   overflow-y: auto;
 }
+
+.TextJustify {
+  text-align: left;
+  /* max-width: 800px;
+  margin: 0 auto;
+  padding: 20px; */
+}

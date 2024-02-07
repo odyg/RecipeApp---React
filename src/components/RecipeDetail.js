@@ -41,11 +41,11 @@ function RecipeDetail({ recipe }) {
 
   return (
     <div>
-      <h2>{recipe.title}</h2>
+      <h3>{recipe.title}</h3>
       <img className="card-img-top" src={recipe.image} alt={recipe.title} />
 
-      <h3>Ingredients:</h3>
-      <ul>
+      <h4 className="TextJustify">Ingredients:</h4>
+      <ul className="TextJustify">
         {ingredientList.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
         ))}
@@ -55,22 +55,26 @@ function RecipeDetail({ recipe }) {
       {recipe.analyzedInstructions &&
         recipe.analyzedInstructions.length > 0 && (
           <>
-            <h3>Instructions:</h3>
-            <ol>{instructionSteps}</ol>
+            <h4 className="TextJustify">Instructions:</h4>
+            <ol className="TextJustify">{instructionSteps}</ol>
           </>
         )}
 
       {/* Add additional details here. Examples: */}
       {recipe.cookingMinutes && (
-        <p>Cooking Time: {recipe.cookingMinutes} minutes</p>
+        <p className="TextJustify">
+          Cooking Time: {recipe.cookingMinutes} minutes
+        </p>
       )}
 
-      {recipe.servings && <p>Servings: {recipe.servings}</p>}
+      {recipe.servings && (
+        <p className="TextJustify">Servings: {recipe.servings}</p>
+      )}
 
       {/* Include any other information you want to display */}
       {/* Example: Dietary tags, if they exist */}
       {recipe.diets && (
-        <div>
+        <div className="TextJustify">
           <h4>Dietary Tags:</h4>
           <ul>
             {recipe.diets.map((diet, index) => (
@@ -82,7 +86,7 @@ function RecipeDetail({ recipe }) {
 
       {/* If there's a source URL or credit text, display it */}
       {recipe.sourceUrl && (
-        <p>
+        <p className="TextJustify">
           Recipe Source:{" "}
           <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer">
             {recipe.sourceUrl}
