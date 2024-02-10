@@ -18,7 +18,9 @@ function RecipeItem({ recipe, onView }) {
                 View
               </button>
             </div>
-            <small className="text-muted">Likes: {recipe.likes}👍</small>
+            <small className="text-muted">
+              Likes: {recipe.aggregateLikes} 👍
+            </small>
           </div>
         </div>
       </div>

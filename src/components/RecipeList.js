@@ -3,14 +3,6 @@ import React, { useState } from "react";
 import RecipeItem from "./RecipeItem";
 import RecipeDetail from "./RecipeDetail";
 
-// function RecipeList({ recipes }) {
-//   const [selectedRecipe, setSelectedRecipe] = useState(null);
-//   const [showModal, setShowModal] = useState(false);
-
-//   const handleView = (recipe) => {
-//     setSelectedRecipe(recipe);
-//     setShowModal(true);
-//   };
 function RecipeList({ recipes, onRecipeSelect, selectedRecipe }) {
   const [showModal, setShowModal] = useState(false);
   // const [selectedRecipeId, setSelectedRecipeId] = useState(null); // Hold the selected recipe ID

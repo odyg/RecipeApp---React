@@ -7,25 +7,6 @@ function RecipeDetail({ recipe }) {
     return <div>Please select a recipe to see the details.</div>;
   }
 
-  // Combine missedIngredients and usedIngredients into a single array
-  // const allIngredients = [
-  //   ...(recipe.missedIngredients || []),
-  //   ...(recipe.usedIngredients || []),
-  // ];
-  // Ensure there is an array to map over for ingredients
-  // const ingredientItems = recipe.missedIngredients
-  //   ? recipe.missedIngredients.map((ingredient, index) => (
-  //       <li key={index}>{ingredient.original}</li>
-  //     ))
-  //   : "No ingredients available";
-  // Map over the combined array to create ingredient list items
-  // const ingredientItems =
-  // recipe.extendedIngredients.length > 0
-  //     ? allIngredients.map((ingredient, index) => (
-  //         <li key={index}>{ingredient.original}</li>
-  //       ))
-  //     : "No ingredients available";
-
   // Extract the 'original' field from each ingredient in the extendedIngredients array
   const ingredientList = recipe.extendedIngredients
     ? recipe.extendedIngredients.map((ingredient) => ingredient.original)
@@ -59,13 +40,6 @@ function RecipeDetail({ recipe }) {
             <ol className="TextJustify">{instructionSteps}</ol>
           </>
         )}
-
-      {/* Add additional details here. Examples: */}
-      {recipe.cookingMinutes && (
-        <p className="TextJustify">
-          Cooking Time: {recipe.cookingMinutes} minutes
-        </p>
-      )}
 
       {recipe.servings && (
         <p className="TextJustify">Servings: {recipe.servings}</p>
