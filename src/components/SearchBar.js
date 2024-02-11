@@ -27,8 +27,8 @@ function SearchBar({ onSearch, onFilter }) {
     "pescetarian",
     "paleo",
     "primal",
-    "low fodmap",
-    "whole30",
+    "fodmap friendly",
+    "whole 30",
     "dairy free",
   ];
 
