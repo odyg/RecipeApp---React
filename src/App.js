@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
+// import RecipeDetail from "./components/RecipeDetail";
 import "./App.css";
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
     const encodedQuery = encodeURIComponent(formattedQuery);
 
     // Construct the API URL with the encoded search query
-    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedQuery}&number=12&apiKey=${ApiKey}`;
+    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedQuery}&number=12&ranking=2&apiKey=${ApiKey}`;
 
     // Fetch recipes from Spoonacular API
     fetch(apiUrl)
@@ -110,10 +111,6 @@ function App() {
     }
   };
 
-  const onSearchFocus = () => {
-    setShowDietFilter(false); // Hide the filter dropdown when the search bar is focused
-  };
-
   return (
     <div className="App">
       <h2>Recipe App</h2>
@@ -127,7 +124,7 @@ function App() {
         onSearch={handleSearch}
         onFilter={handleFilter}
         showFilter={showDietFilter}
-        onSearchFocus={onSearchFocus}
+        // onSearchFocus={onSearchFocus}
       />
       <RecipeList
         recipes={recipes}
